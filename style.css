@@ -16,6 +16,9 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider {
@@ -27,7 +30,6 @@ body {
   gap: 8px;
   align-items: flex-end;
   justify-content: center;
-  border: 1px solid blue;
   position: relative;
 }
 
@@ -41,7 +43,6 @@ body {
   height: 460px;
   overflow: hidden;
   translate: -50% 0;
-  border: 1px solid purple;
 }
 
 .slider__wrapper {
@@ -75,9 +76,7 @@ body {
   &::after {
     content: '';
     position: absolute;
-    bottom: calc(
-      50%
-    );
+    bottom: 50%;
     z-index: 10;
     width: 32px;
     height: 64px;
@@ -109,7 +108,6 @@ body {
     transition: all 0.2s cubic-bezier(0.11, 1.03, 0.82, 1.33);
     scale: 0.75;
     cursor: pointer;
-    border: 1px solid red;
 
     &:hover {
       scale: 1;
