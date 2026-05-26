@@ -6,6 +6,11 @@
   list-style: none;
 }
 
+body {
+  background: gray;
+  overflow: hidden;
+}
+
 .container {
   width: 100vw;
   min-height: 100vh;
