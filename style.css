@@ -22,7 +22,7 @@ body {
 }
 
 .slider {
-  width: 100%;
+  width: calc(100% - 120px);
   max-width: 800px;
   height: 550px;
   margin: 0 auto;
@@ -37,7 +37,7 @@ body {
     top: 0px;
     left: 50%;
     z-index: 5;
-    width: 90vw;
+    width: 100%;
     max-width: 800px;
     height: 510px;
     overflow: hidden;
@@ -67,6 +67,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 32px;
+  color: #fff;
   line-height: 32px;
   font-size: 22px;
   text-align: center;
@@ -110,17 +111,16 @@ body {
     position: absolute;
     bottom: calc(50% + 36px);
     z-index: 10;
-    width: 32px;
+    width: 50px;
     height: 64px;
     cursor: pointer;
-    background: url(./assets/images/paw.svg) no-repeat 0px / 72px gray;
-    transition: width 0.3s ease-in;
+    background: url(./assets/images/paw.svg) no-repeat 11px / 72px gray;
+    transition: all 0.4s ease-in;
     translate: 0 50%;
-    border: 1px solid red;
   }
 
   &:hover::after {
-    width: 48px;
+    width: 60px;
   }
 
   > input {
@@ -139,7 +139,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.95;
     }
 
     &:checked {
@@ -157,8 +157,6 @@ body {
 
     .slider__label::after {
       right: 100%;
-      border-top-left-radius: 9999px;
-      border-bottom-left-radius: 9999px;
     }
   }
 
@@ -194,5 +192,41 @@ body {
   &:has(input:checked) + & {
     z-index: 7;
     display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .slider {
+    width: calc(100% - 16vw);
+    gap: 5px;
+  }
+
+  .slider__label {
+    > input {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
+  .slider__text {
+    font-size: 16px;
+    line-height: 1;
+    bottom: -5px;
+  }
+
+  .slider__label {
+    &::after {
+      width: 6vw;
+      height: 8vw;
+      background: url(./assets/images/paw.svg) no-repeat 1.5vw / 10vw gray;
+    }
+
+    &:hover::after {
+      width: 8vw;
+    }
   }
 }
