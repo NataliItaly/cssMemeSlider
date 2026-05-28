@@ -7,9 +7,11 @@
 }
 
 body {
-  background: #504c4c;
+  background: url(./assets/images/bg.svg) #504c4c;
+  background-size: 250px;
   overflow: hidden;
 }
+
 
 .container {
   width: 100%;
@@ -117,6 +119,8 @@ body {
     background: url(./assets/images/paw.svg) no-repeat 11px / 72px #504c4c;
     transition: all 0.4s ease-in;
     translate: 0 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
   }
 
   &:hover::after {
