@@ -7,7 +7,7 @@
 }
 
 body {
-  background: gray;
+  background: #504c4c;
   overflow: hidden;
 }
 
@@ -114,7 +114,7 @@ body {
     width: 50px;
     height: 64px;
     cursor: pointer;
-    background: url(./assets/images/paw.svg) no-repeat 11px / 72px gray;
+    background: url(./assets/images/paw.svg) no-repeat 11px / 72px #504c4c;
     transition: all 0.4s ease-in;
     translate: 0 50%;
   }
@@ -222,7 +222,7 @@ body {
     &::after {
       width: 6vw;
       height: 8vw;
-      background: url(./assets/images/paw.svg) no-repeat 1.5vw / 10vw gray;
+      background: url(./assets/images/paw.svg) no-repeat 1.5vw / 10vw #504c4c;
     }
 
     &:hover::after {
